@@ -1,0 +1,341 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    color: #404040;
+    background: #fff;
+}
+a{cursor: pointer;}
+
+#wrapper{
+    width: 90vw;
+    margin: 0.5rem auto;
+} 
+
+.header{
+    /* background-color: rgba(21, 102, 102, 0.895); */
+    margin-left: 8%;
+    width: 92%;
+    float: right;
+}
+
+#logo{
+    /*background-color: rgba(21, 102, 102, 0.895);  */
+    width: 13%;
+}
+.logo_big{
+    display: none;
+    width: 100%;
+	max-width: 15rem;
+}
+.logo_small{ display: block;
+    /* height: 80%; */
+    width: 100%;
+    border-bottom: 0.5rem solid #5f5d5d00;  
+	/*max-width: 82.5%;  */
+}
+#slider-wrapper{
+    background-color: #fff;
+    width: calc(87% - 1rem);
+    /* width:850px; 
+    
+    float: right; /**/height: auto;
+    margin-left: 1rem;
+     position:relative; /**/
+     overflow:hidden;
+}
+/* .nivoSlider img {
+    max-width: 200%;
+    height: auto;
+} */
+.verschieben{ 
+    position:absolute;
+    bottom:0px;
+    left:10px;
+    z-index:11000;
+    color:#5f5d5de5;
+    padding: 0.2rem;
+    background-image:linear-gradient(to right, #fff,#ffffff86,#ffde59a1, #ffde59);
+    font-size: 2rem;
+    line-height: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+                            
+/*############## Side Nav ######################################*/
+#side-nav{
+    /* background-color: #ffde59; */
+    width:8%;
+	/* max-width: 5.82rem; */
+    float: left;
+    justify-content: left;
+	position: fixed;
+	top: 0.5rem;/**/
+    left: calc(4.5%);
+}
+
+#side-nav ul{
+    /* background-color: #9e2e2e67; */
+    list-style: none;
+    padding-inline-start: 0;
+    text-align: center;
+    /* line-height: 1.7rem; */
+}
+#side-nav a{ display: block;
+    text-decoration: none;
+    font-size: 0.8rem;
+    height: 1.5rem;
+    align-content: center;
+}
+#side-nav a:hover{ 
+    background-color: #4040401c;
+    border-radius: 0 3rem 3rem 0;
+}
+#side-nav li{
+    line-height: 1rem;
+}
+#side-nav .menu1 a{
+    height: 4rem;
+    font-size: 1rem;
+}
+#side-nav .menu2 a{ 
+    /* background-color: #cc303049; */
+    margin: 0;
+    height: 4rem;
+    align-content: center;
+}
+#side-nav .footer-menu a{
+    height: 4rem;
+    align-content: center;
+}
+.menu_icon{
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+.menu1{ background-color: #ffde59;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+.menu2{ background-color: #ffde59;
+    /* margin-top: 3rem; */
+    padding-top: 2rem;
+    border-top: 2px dotted #5f5d5db4;  
+	border-bottom: 2px dotted #5f5d5db4;
+}
+.footer-menu{background-color: #ffde59;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+#side-nav:before, #side-nav:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+}
+#side-nav:before {
+    background: /*#F0B032*/#ffde59;
+    /* box-shadow: 3px 3px .2px #362708; */
+    width:100%;
+    height: 2rem;
+    bottom: 0;
+}
+#side-nav:hover:after {
+    border: 1rem solid transparent;
+    border-left-color:#d69a23;
+    border-top-color:#d69a23;
+    bottom: 0;
+    right: 0;
+    box-shadow: -0.3125rem -0.3125rem .4em #36353150;
+}
+
+/*########## Notes Area ################################## */
+#content{
+    /* background-color:#F8F4E6;*/ 
+    background-image: linear-gradient(to bottom,#fff 80% , #F8F4E6, #FFF2BF, #ffde59);/**/
+	margin-left: 5%;
+	width: 92%;
+    height: auto;
+    padding:1rem;
+	padding-bottom: 6rem;
+    overflow: auto;
+    gap: 1rem;
+    justify-content: left;
+	float: right;
+    /*border-top-left-radius: 2rem;
+	position: absolute;*/
+}
+
+/*############# add new note #################################*/
+#newCard{
+   /*width:calc( 50% - 3.5rem);*/
+	width: calc(50% - 3.5rem);
+    /*min-width: 39rem;
+    max-width: 40rem;*/
+    height:auto;
+    min-height: 20rem;
+    max-height: 21rem;
+    /*margin: 0.5rem;*/
+    margin-bottom: 1rem;
+    margin-right: 2.5rem; /**/  
+    line-height: normal;
+    background-color: /*#F0B032*/#ffde59;
+    padding: 1rem;
+    position: relative;
+}
+
+/*############ folded card effect ########################################################*/
+#newCard:before, #newCard:after {
+    content: '';
+    position: absolute;
+    left: 100%;
+}
+#newCard:before {
+    background: /*#F0B032*/#ffde59;
+    /* box-shadow: 3px 3px .2px #362708; */
+    width: 2.5rem;
+    height: 21rem;
+    top: 0;
+}
+#newCard:hover:after {
+    border: 1.25rem solid transparent;
+    border-left-color:#d69a23;
+    border-top-color:#d69a23;
+    bottom: 0;
+    box-shadow: -0.3125rem -0.3125rem .4em #36353150;
+}
+
+/*########################################################################################*/
+
+.newnote-header p{ 
+	display: block;
+    float:  left;
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(88,86,86,1.00);
+	padding-bottom: 0.5rem;
+}
+#note_text{
+    resize: none;
+}
+
+.savenew_btn{
+    background-color: #ffde59;
+    border-color: #d69a23;
+    color: #0366ee;
+}
+.savenew_btn:hover{
+    background-color: #4040401c;
+    /* border-color: #ffde59; */
+    color:#024db6;
+}
+
+.card{
+    background-color:#feff9c;
+    /*width: calc(25% - 1rem);*/
+	width: calc(25% - 1rem);
+/*    min-width: 20rem;
+    max-width: 30rem;*/
+    height:auto;
+    min-height: 20rem;
+    max-height: 21rem;
+   /* margin: 0.5rem;*/
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    line-height: normal;
+    border-radius: 0.35rem;
+}
+
+.card:hover{
+    box-shadow: -0.3125rem -0.3125rem .4em #36353150;
+}
+.cat0{
+    background-color: /*#fff740; */#fff8b8
+}
+.cat1{
+    background-color: /*#faafa8;*/ #f39f76;
+}
+.cat2{
+    background-color: /*#7afcff; */#e2f6d3;
+}
+.cat3{
+    background-color: /*#ff65a3; */#d3bfdb;
+}
+.cat4{
+    background-color: /*#a7f8ef;*/ #b4ddd3
+}
+.cat5{
+    background-color:/* #ffd000; */#e9e3d4;
+}
+.icon_btn{
+    padding: 0.4rem;
+}
+.icon_btn:hover{
+    background-color: #4040401c;
+    border-radius: 3rem;
+}
+.btn_container, .newnote-header{
+    /* background-color: aquamarine; */
+    margin-bottom: 0.5rem;
+    text-align: right;
+}
+
+.btn_container p{ 
+    float:  left;
+    /* color: black; */
+    margin: 0;
+    font-size: 0.9rem;
+}
+.card_text{
+    padding: 0.3rem;
+    overflow: auto;
+    font-size: 90%;
+    height: 17rem;
+    resize: none;
+	line-height: normal;
+    /* border: none; */
+}
+/* ##############################################*/
+
+.link_inactive, .link_inactive:hover{color: darkgrey;
+    text-decoration: none;
+    cursor:auto;
+}
+/* .link_active{color: #fff;} */
+
+/*############### footer ##############################*/
+.footer{
+    /* background-color: #ffd000  */
+    height: 10vh;  /**/
+}
+
+@media (max-width: 77.185rem){
+	#newCard{ width:calc(75% - 3.5rem);}
+    .verschieben{font-size:2rem;}
+}
+
+@media (max-width: 70rem){
+	#newCard{ width:calc(100% - 3.5rem);}
+    .card{width: calc(33.333% - 1rem);}
+}
+
+@media (max-width: 52rem){
+    .menu_text{display: none;}/**/
+	#newCard{ width:calc(100% - 3.5rem);}
+    .card{width: calc(50% - 1rem);}/**/
+	#side-nav .menu2 a{height: 2.5rem;}
+	#side-nav .footer-menu a{height: 2.5rem;}
+	.menu2{padding-top: 1rem;}
+    .menu1{padding-bottom: 0.1rem;}
+    .verschieben{font-size:1.5rem;}
+}
+
+@media (max-width: 36.875rem){
+	.newnote-header p{display: none;}
+	#newCard{ width:calc(100% - 3.5rem);}
+	#newCard{ min-height:25rem;}
+	#newCard:before {height:25rem;}
+	.card{width: calc(100% - 1rem);}
+	#note_text{height:18rem;}
+    .verschieben{font-size:1rem;}
+}
+
