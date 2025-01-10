@@ -1,110 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-    <head>
-        <title>TiNo: Tiny Notes</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="css/primitive.css">
+	<head>
+		<meta charset="utf-8">
+		<title>TiNo: Launch-Seite</title>
+		<link rel="stylesheet" href="css/primitive.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="icons/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="css/nivo-slider.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="icons/font/bootstrap-icons.min.css">    
 		<link rel="icon" href="img/TiNo_fav.png" type="image/x-icon">
-        <!-- <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Jersey+10&family=Jersey+15&display=swap" rel="stylesheet">		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css"> -->
-		<!-- <link rel="stylesheet" href="css/custom_scrollbars.css"> -->
-        
         <script src="js/date_time.js"></script>
-        <script src="js/tino.js"></script>
-    </head>
-    <body onLoad="ZeitAnzeigen('de'); getAllData()">
-        <div id="wrapper" class="large-container">
-            <header>
-                <div class="flex-row header">
-                    <nav id="side-nav">
-                        <img src="img/TiNo_Simple_logo.png" alt="Tino Logo" class="logo_small">
-                        <img src="img/TiNo_Text_logo.png" alt="Tino Logo" class="logo_big">
-                        <div class="menu1"> 
-                            <ul>
-                                <li><a href="#content"><i class="menu_icon bi bi-sticky"></i><br><span class="menu_text">Notizen</span></a></li>
-                            </ul>
-                        </div>
-                        <div class="menu2">
-                            <ul>
-                                <li> <a href="about.html"><i class="menu_icon bi bi-rocket"></i><br><span class="menu_text">Launch-Seite</span></a> </li>
-                                <li><a href="about.html#features" class="hide"><i class="menu_icon bi bi-gear"></i><br><span class="menu_text">Einstellungen</span></a></li>
-                                <li><a href="about.html#contact"><i class="menu_icon bi bi-envelope"></i><br><span class="menu_text">Kontakt</span></a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-menu">
-                            <ul>
-                                <li><a href="about.html#concept"><span class="menu_icon">§</span><br><span class="menu_text">Datenschutz</span></a></li>
-                                <!--<li><a href="#"><span class="footer_menu_text">AGB</span></a></li>-->
-                            </ul>
-                        </div>
-                    </nav>
+	</head>
+
+	<body>
+		<div id="wrapper" class="large-container">
+		 	<header>
+                <div class="flex-row">
                     <div id="logo" class="">
                         <!-- <h1>TiNo</h1> -->
-                         <!-- <img src="img/TiNo_logo.png" alt="Tino Logo" class="logo_big"> -->
-                         <img src="img/TiNo_Text_logo.png" alt="Tino Logo" class="logo_small">
+                         <img src="img/TiNo_logo.png" alt="Tino Logo" class="logo_big">
+                         <img src="img/TiNo_Simple_logo.png" alt="Tino Logo" class="logo_small">
                     </div>
-                    <div id="slider-wrapper">
-                        <div id="slider" class="nivoSlider">
-                            <img src="img/bg/1.png" alt=""> 
-                            <img src="img/bg/4.png" alt="">
-                            <img src="img/bg/2.png" alt="">
-                            <img src="img/bg/5.png" alt="">
-                            <img src="img/bg/3.png" alt="">
-                            <img src="img/bg/6.png" alt="">
-                        </div>
-                        <div id="dat_uhr" class="verschieben">time/date</div>
+                    <div id="slider" class="three-fourths">
+                        <div id="dat_uhr">time/date</div>
                     </div>
                 </div>
             </header>
-            <main>
-                
-                <!-- <h1>My Notes</h1> -->
-                <div id="content" class="flex-row">
-						<div id= "newCard" class="">
-							<div class="newnote-header">
-								<a class="icon_btn link_inactive hide"><i class="bi bi-sticky"></i> Notiz</a>
-								<a  class="icon_btn link_inactive hide"><i class="bi bi-list-check"></i> List</a>
-								<p>Dein TiNo-Zettel wartet...</p>
-							</div>
-							<textarea id="note_text" name="note_text" cols="40" rows="13" required aria-label="note text"></textarea>
-							<input type="button" onclick="newCard()" value="+ Speichern" class="savenew_btn round-button">
+            <main> 
+				
+				<section id="intro" class="section flex-row parallax-window" data-parallax="scroll" data-image-src="img/bg/clouds.png">
+					
+					<div class="hero_img">
+						<h4>Sag Hallo zu:</h4>
+						<img alt="tino logo" src="img/TiNo.png" >
+						<h4 class=" text-center">Dein einfacher, Offline-Notizblock</h4>
+					</div>
+					<div class="intro_text">
+						<h4>Fange Ideen ein, schreibe Listen und schreibe frei – jederzeit und überall.</h4>
+						<p>
+						Eine minimalistische, browserbasierte Notizen-App, die offline funktioniert und sicherstellt, dass Ihre Gedanken und Ideen immer griffbereit sind. Keine Konten, kein Internet – nur Sie und Ihre Notizen.
+						</p>
+					</div>
+						
+					<a href="app.html" id="CTA">
+						<button class="CTA_btn" type="button">
+							Jetzt ausprobieren!
+						</button>
+					</a>
+					
+				</section>
+			
+				<ul id="top_nav">
+					<li><a href="#intro"><i class="menu_icon bi bi-house-door"></i><br><span class="menu_text">Start</span></a></li>
+					<li> <a href="#features"><i class="menu_icon bi bi-rocket"></i><br><span class="menu_text">Funktionen</span></a></li>
+					<li><a href="#concept"><i class="menu_icon bi bi-gear"></i><br><span class="menu_text">Konzept</span></a></li>
+					<li><a href="#contact"><i class="menu_icon bi bi-envelope"></i><br><span class="menu_text">Kontakt</span></a></li>
+				</ul>
+					
+				 
+				<section id="features" class="section parallax-window" data-parallax="scroll" data-image-src="img/bg/bg_trans.png">
+					<nav id="side-nav">
+						<div class="menu1"> 
+							<a href="app.html" title="Zur App!" class="text-center"><!--<img alt="" src="img/TiNo_fav.png"><br>--></a>
 						</div>
-                 </div>
+					</nav>
+					<h2>Funktionen</h2>
+					<p>TiNo setzt auf ein einfaches, benutzerfreundliches Design, das sich auf das Wesentliche konzentriert: Ihre Notizen. Mit nur wenigen Klicks können Sie Notizen erstellen, bearbeiten oder löschen.</p>
+					<p>Die Funktionsweise ist ebenso simpel wie effektiv: 
+					 TiNo speichert alle Daten direkt im lokalen Speicher Ihres Browsers. 
+					 Das bedeutet, dass Ihre Notizen sicher und privat bleiben, 
+					 ohne dass eine Registrierung oder Synchronisation erforderlich ist. 
+					 Einfachheit und Effizienz stehen bei TiNo im Vordergrund.</p> 
+					<div class="flex-row f_boxes">
+						<div class="feature_box">
+							<img class="feature_img" alt="feature-2 image" src="img/2.png">
+							<h5>Deine Daten gehören dir. Punkt.</h5>
+								<p class="feature_text">Ohne Konten und ohne Cloud-Speicherung bewahrt TiNo Ihre Notizen sicher in Ihrem Browser mithilfe der <a href="about.html#concept">localStorage-Technologie</a> auf.</p>
+						</div>
+						<div class="feature_box">
+							<img class="feature_img" alt="feature-1 image" src="img/1.png">
+							<h5>Intuitive Nutzung</h5>
+								<p class="feature_text">Das einfache und farbenfrohe Design ermöglicht eine intuitive Nutzung. Es ist ideal für Nutzer, die schnell und unkompliziert Notizen erstellen und verwalten möchten.</p>
+						</div>
+
+						<div class="feature_box">
+							<img class="feature_img" alt="feature-3 image" src="img/3.png">
+							<h5>Offline-Funktionalität</h5>
+								<p class="feature_text">TiNo funktioniert ohne Internetverbindung. Dies ist besonders nützlich in Umgebungen mit eingeschränktem Zugang zum Internet oder für Benutzer, die maximale Privatsphäre schätzen.</p>
+						</div>
+					</div>
+				</section>
+				<!--<section id="quick_guide" class="section">
+					<h2>Quick-Guide</h2>
+					<p>TiNo setzt auf ein einfaches, benutzerfreundliches Design, das sich auf das Wesentliche konzentriert: Ihre Notizen. Mit nur wenigen Klicks können Sie Notizen erstellen, bearbeiten oder löschen.</p><br>
+					<picture>
+					<img src="img/Screenshot_TiNo.JPG" alt="Screenshot TiNo Wep-App">
+					<caption>TiNo Wep-App</caption>
+					</picture>
+				</section>-->
+				
+				<section id="concept" class="section parallax-window" data-parallax="scroll" data-image-src="img/bg/bg2_trans.png">
+					<h2>Das Konzept hinter TiNo</h2>
+					<h5>Was ist localStorage?</h5>
+					<p>
+					<code>localStorage</code> ist eine Funktion moderner Webbrowser, die es ermöglicht, Daten auf dem Gerät eines Benutzers zu speichern. Im Gegensatz zu Cookies bietet es eine größere Speicherkapazität (5-10 MB) und läuft nicht automatisch ab.<br> Mit TiNo werden Ihre Notizen sicher im <code>localStorage</code> Ihres Browsers gespeichert, was bedeutet, dass sie Ihr Gerät nie verlassen. Dies gewährleistet:</p>
+
+					<ul>
+						<li>Einfachheit: Keine Synchronisation, keine Server, keine Komplikationen.</li>
+
+						<li>Privatsphäre: Ihre Notizen bleiben Ihre – immer.</li>
+
+						<li>Zuverlässigkeit: Daten bleiben erhalten, selbst nach dem Schließen Ihres Browsers, ohne dass eine Internetverbindung erforderlich ist.</li>
+					</ul>
+					
+					
+						<h5>Wie unterscheidet es sich von Cookies?</h5>
+						<p>Cookies sind nützlich für serverseitige Funktionen wie Sitzungsverfolgung und Benutzeranmeldung. <code>localStorage</code> hingegen ist rein clientseitig und bietet eine einfache Lösung für die langfristige Speicherung von Daten, ohne dass Daten mit einem Server synchronisiert werden müssen. In TiNo wird <code>localStorage</code> verwendet, um sicherzustellen, dass Ihre Notizen auf Ihrem Gerät gespeichert und schnell zugänglich sind, ohne externe Abhängigkeiten.
+					</p><br>
+					<blockquote>
+						<p style="font-size:1.2rem;"><b>§ Datenschutzerklärung:</b>
+							TiNo speichert Ihre Notizen ausschließlich lokal in Ihrem Browser mithilfe von <code>localStorage</code>. Ihre Daten werden weder auf Servern gespeichert noch mit Dritten geteilt.
+							Sie können die gespeicherten Daten jederzeit löschen, indem Sie die Notizen in der App löschen oder den Speicher Ihres Browsers leeren.
+							Es werden keine personenbezogenen Daten erhoben oder verarbeitet.</p>
+					</blockquote>
+					<br>
+					<h5>Weitere Infos:</h5>
+					<div class="resources">
+						<ul>
+							<li><a href="https://developer.mozilla.org/de/docs/Web/API/Window/localStorage" target="_blank">MDN</a></li>
+							<li><a href="https://www.w3schools.com/jsreF/prop_win_localstorage.asp" target="_blank">W3Schools</a></li>
+							<li><a href="https://wiki.selfhtml.org/wiki/JavaScript/Web_Storage" target="_blank">SelfHTML</a></li>
+						</ul>
+					</div>
+				</section>
+				
+				<section id="contact" class="section">
+				<h2>Kontakt</h2>
+				<form class="kontakt_form" method="post" action="#">
+					<div class="form_elemente">
+						<h4>Haben Sie Fragen oder Feedback? Wir freuen uns darauf, von Ihnen zu hören!</h4>
+						<input  type="text" name="kunden_name" placeholder="Ihr Name hier..."><br>
+						<input type="email" placeholder="Ihre E-Mail Adresse *" required><br>
+						<textarea name="kunden_text" placeholder="Schreiben Sie uns Ihre Fragen oder Anregungen.." rows="4"></textarea><br>
+						Erhalten Sie die neuesten Updates, Tipps und Tricks sowie spannende Infos direkt in Ihr Postfach. Sie können sich jederzeit abmelden.<br>
+						<input type="checkbox" name="newsletter">  Ja, ich möchte den TiNo-Newsletter abonnieren!<br>
+						<input type="checkbox" name="datschutzhiweis" required> Datenschutzhinweis gelesen und akteptiert. *<br>
+						<br><input type="submit"  value="Senden" class="ylw_btn round-button"> <input type="reset"  value="Zurücksetzen" class="ylw_btn round-button">
+					</div>
+				</form>	
+				<!-- </section>
+			<section id="datenshutz" class="section"> -->
+				<h2>Datenschutzhinweis</h2>
+					<div class="datenschutz_hinweis small-container">
+						<!-- <h4 class="text-center">Datenschutzhinweis:</h4> -->
+						<h4>1. Verantwortlicher für die Datenverarbeitung</h4>
+						<p>Max Mustermann<br>
+						Musterstraße 1a <br>45678 Musterstadt. Deutschland<br>
+						m.mustermann[at]tino.de</p>
+
+						<h4>2. Zweck der Datenverarbeitung</h4>
+						<p>Die von Ihnen angegebenen Daten (z.B. Name, E-Mail-Adresse) werden ausschließlich verwendet, um Ihnen unseren Newsletter zuzusenden.</p>
+
+						<h4>3. Rechtsgrundlage</h4>
+						<p>Die Verarbeitung Ihrer Daten erfolgt auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.</p>
+
+						<h4>4. Datenempfänger</h4>
+						<p>Ihre Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist zur Erfüllung des Vertrages erforderlich oder Sie haben ausdrücklich eingewilligt.</p>
+
+						<h4>5. Speicherdauer</h4>
+						<p>Ihre Daten werden so lange gespeichert, wie Sie unseren Newsletter abonniert haben. Nach der Abmeldung werden Ihre Daten umgehend gelöscht.</p>
+
+						<h4>6. Ihre Rechte</h4>
+						<p>Sie haben das Recht, jederzeit Auskunft über die zu Ihrer Person gespeicherten Daten zu verlangen. Zudem haben Sie das Recht auf Berichtigung, Löschung oder Einschränkung der Verarbeitung Ihrer Daten. Sie können Ihre Einwilligung zur Verarbeitung Ihrer Daten jederzeit widerrufen.</p>
+
+						<h4>7. Widerrufsrecht</h4>
+						<p>Sie können sich jederzeit von unserem Newsletter abmelden, indem Sie auf den Abmeldelink in jedem Newsletter klicken oder uns direkt kontaktieren.</p>
+
+						<h4>8. Kontakt</h4>
+						<p>Für Fragen zum Datenschutz oder zur Ausübung Ihrer Rechte können Sie uns unter der oben angegebenen E-Mail-Adresse kontaktieren.</p>
+					</div>
+				</section>
+				<!--</div>-->
 			</main>
-            <footer>
-                
-            </footer>
-        </div> <!--  wrapper -->
-        <script src="js/jquery-1.11.0.min.js"></script>
-		<script src="js/jquery.nivo.slider.pack.js"></script>
+			<footer>
+				<p>TiNo: Tiny Notes | 2025</p>
+		</footer>
+		</div> <!--wrapper-->
+		
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/jquery.nav.js"></script>
+		<script src="js/parallax.js"></script>
 		<script>
-			$(window).load(function() {
-				$('#slider').nivoSlider({
-					effect: 'fade', // Specify sets like: 'fold,fade,sliceDown'
-					slices: 1, // For slice animations
-					boxCols: 8, // For box animations
-					boxRows: 4, // For box animations
-					animSpeed: 1500, // Slide transition speed
-					pauseTime: 6000, // How long each slide will show
-					startSlide: 0, // Set starting Slide (0 index)
-					directionNav: false, // Next & Prev navigation
-					controlNav: false, // 1,2,3... navigation
-					controlNavThumbs: true, // Use thumbnails for Control Nav
-					pauseOnHover: false, // Stop animation while hovering
-					manualAdvance: false, // Force manual transitions
-					prevText: '', // Prev directionNav text
-					nextText: '', // Next directionNav text
-					randomStart: false, // Start on a random slide
-					beforeChange: function(){}, // Triggers before a slide transition
-					afterChange: function(){}, // Triggers after a slide transition
-					slideshowEnd: function(){}, // Triggers after all slides have been shown
-					lastSlide: function(){}, // Triggers when last slide is shown
-					afterLoad: function(){} // Triggers when slider has loaded			
-				});
-			});
+		$(document).ready(function() {
+			$('#top_nav').onePageNav();
+		});	
 		</script>
-    </body>
+	</body>
 </html>
